@@ -28,10 +28,8 @@ class GetRenewableTicketsScreen extends GetView<GetRenewableTicketsScreenControl
               padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15),
               child: Wrap(
                 children: [
-                  Flexible(
-                      child:  customTextWidget(context, data: 'Total Tickets found- ', textColor: Colors.blue, fontSize: Constants.headingFontSize, fontWeight: FontWeight.bold)),
-                  Flexible(
-                      child: Obx(() => customTextWidget(context, data: controller.loading.value ? '' : '${controller.totalItems.value}' , textColor: Colors.blue, fontSize: Constants.headingFontSize, fontWeight: FontWeight.bold))),
+                  customTextWidget(context, data: 'Total Tickets found- ', textColor: Colors.blue, fontSize: Constants.headingFontSize, fontWeight: FontWeight.bold),
+                  Obx(() => customTextWidget(context, data: controller.loading.value ? '' : '${controller.totalItems.value}' , textColor: Colors.blue, fontSize: Constants.headingFontSize, fontWeight: FontWeight.bold)),
                 ],
               ),
             ),
